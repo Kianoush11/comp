@@ -6,16 +6,22 @@ const moment  = require("moment");
 var used1 = false;
 
 const Games = [
-  
     "Minecraft", 
     "Grand Theft Auto V", 
     "Grand Theft Auto : San Andreas", 
-    "Watch Dogs 2"و 
+    "Watch Dogs 2", 
     "Among Us", 
     "Lego",
-    "دایر گوز"
+    "دایر گوز", 
+    "Counter Strike : Global Offensive", 
+    ":|"
 ];
 
+const Statas = [
+   "online", 
+   "dnd", 
+   "idle"
+];
 
 
 
@@ -26,7 +32,13 @@ bot.once('ready', () => {
 
        const index = Math.floor(Math.random() * (Games.length - 1) + 1);
        bot.user.setActivity(Games[index]);
-    }, 3000000);
+    }, 100000);
+
+    setInterval(() => {
+
+       const index2 = Math.floor(Math.random() * (Statas.length - 1) + 1);
+       bot.user.setStatus(Statas[index2]);
+    }, 200000);
     
 });
 
@@ -50,7 +62,22 @@ bot.on('message', (message) => {
 
     };
 
+    if (message.content == "من ناراحتم") {
+      
+        message.channel.send("هعی <:PB_cry:791931139555196928>")
 
+    };
+
+    if (message.content == "آروین") {
+      
+        message.channel.send("اسممو نگوووو<:secshot:791749450191601695>")
+    };
+
+
+    if (message.content == ":neutral_face:") {
+      
+        message.channel.send(":neutral_face:")
+    };
 
 });
 
