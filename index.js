@@ -6,7 +6,6 @@ const moment  = require("moment");
 var used1 = false;
 
 const Games = [
-  
     "Minecraft", 
     "Grand Theft Auto V", 
     "Grand Theft Auto : San Andreas", 
@@ -16,6 +15,11 @@ const Games = [
     "دایر گوز"
 ];
 
+const statas = [
+   "online", 
+   "dnd", 
+   "idle"
+];
 
 
 
@@ -26,7 +30,13 @@ bot.once('ready', () => {
 
        const index = Math.floor(Math.random() * (Games.length - 1) + 1);
        bot.user.setActivity(Games[index]);
-    }, 3000000);
+    }, 30000);
+
+    setInterval(() => {
+
+       const index = Math.floor(Math.random() * (statas.length - 1) + 1);
+       bot.user.setStatus(statas[index]);
+    }, 50000);
     
 });
 
