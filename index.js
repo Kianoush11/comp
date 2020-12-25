@@ -35,7 +35,7 @@ bot.once('ready', () => {
     setInterval(() => {
 
        const index2 = Math.floor(Math.random() * (Statas.length - 1) + 1);
-       bot.user.setStatus(statas[index2]);
+       bot.user.setStatus(Statas[index2]);
     }, 50000);
     
 });
