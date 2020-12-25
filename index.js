@@ -15,7 +15,7 @@ const Games = [
     "دایر گوز"
 ];
 
-const statas = [
+const Statas = [
    "online", 
    "dnd", 
    "idle"
@@ -34,8 +34,8 @@ bot.once('ready', () => {
 
     setInterval(() => {
 
-       const index = Math.floor(Math.random() * (statas.length - 1) + 1);
-       bot.user.setStatus(statas[index]);
+       const index2 = Math.floor(Math.random() * (Statas.length - 1) + 1);
+       bot.user.setStatus(statas[index2]);
     }, 50000);
     
 });
