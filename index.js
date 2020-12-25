@@ -76,14 +76,14 @@ bot.on('message', (message) => {
 
     if (message.content == ":neutral_face:") {
       
-        message.reply(":neutral_face")
+        message.channel.send(":neutral_face:")
     };
 
 });
 
 bot.on("message", msg => {
 
-    if (msg.author.bot) return;
+    if (msg.author.bot) return msg.channel.send("کوبص<:PB_cry:791931139555196928>"");
     if (msg.channel.type == "dm") return msg.channel.send("<:pogpoker:788071979584454697>");
 });
 
