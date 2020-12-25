@@ -9,7 +9,7 @@ const Games = [
     "Minecraft", 
     "Grand Theft Auto V", 
     "Grand Theft Auto : San Andreas", 
-    "Watch Dogs 2"و 
+    "Watch Dogs 2", 
     "Among Us", 
     "Lego",
     "دایر گوز"
