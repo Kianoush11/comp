@@ -64,7 +64,7 @@ bot.on('message', (message) => {
 
     if (message.content == "من ناراحتم") {
       
-        message.channel.send("هعی<:PB_cry:744998230479208569>")
+        message.channel.send("هعی<:PB_cry:791931139555196928>")
 
     };
 
