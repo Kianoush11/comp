@@ -12,7 +12,9 @@ const Games = [
     "Watch Dogs 2", 
     "Among Us", 
     "Lego",
-    "دایر گوز"
+    "دایر گوز", 
+    "Counter Strike : Global Offensive", 
+    ":|"
 ];
 
 const Statas = [
@@ -30,13 +32,13 @@ bot.once('ready', () => {
 
        const index = Math.floor(Math.random() * (Games.length - 1) + 1);
        bot.user.setActivity(Games[index]);
-    }, 30000);
+    }, 100000);
 
     setInterval(() => {
 
        const index2 = Math.floor(Math.random() * (Statas.length - 1) + 1);
        bot.user.setStatus(Statas[index2]);
-    }, 50000);
+    }, 200000);
     
 });
 
@@ -60,7 +62,22 @@ bot.on('message', (message) => {
 
     };
 
+    if (message.content == "من ناراحتم") {
+      
+        message.channel.send("هعی<:PB_cry:791749450191601695>")
 
+    };
+
+    if (message.content == "آروین") {
+      
+        message.channel.send("اسممو نگوووو<:secshot:791749450191601695>")
+    };
+
+
+    if (message.content == "دایر") {
+      
+        message.channel.send("دایر گوز<:pogpoker:788071979584454697>")
+    };
 
 });
 
