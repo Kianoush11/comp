@@ -10,15 +10,13 @@ const Games = [
     "Minecraft", 
     "Grand Theft Auto V", 
     "Grand Theft Auto : San Andreas", 
-    "Watch Dogs 2"
+    "Watch Dogs 2"و 
+    "Among Us", 
+    "Lego",
+    "دایر گوز"
 ];
 
-const statas = [
-'dnd', 
-'idle', 
-'invincible', 
-'online'
-];
+
 
 
 bot.once('ready', () => {
@@ -28,15 +26,8 @@ bot.once('ready', () => {
 
        const index = Math.floor(Math.random() * (Games.length - 1) + 1);
        bot.user.setActivity(Games[index]);
-    }, 20000);
+    }, 3000000);
     
-    setInterval(() => {
-
-        const index = Math.floor(Math.random() * (statas.length - 1) + 1);
-        bot.user.setStatus(statas[index]);
-     }, 20000);
-
-
 });
 
 bot.on('message', (message) => {
