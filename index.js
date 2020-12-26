@@ -66,7 +66,7 @@ bot.on('message', (message) => {
 
     if (message.content == "سلام") {
       
-        message.channel.send("سلام <:pogpoker:788071979584454697>")
+        message.channel.send("سلام")
 
     };
 
@@ -78,19 +78,19 @@ bot.on('message', (message) => {
 
     if (message.content == "دایر") {
       
-        message.channel.send("دایر گوز<:pogpoker:788071979584454697>")
+        message.channel.send("دایر گوز")
 
     };
 
     if (message.content == "من ناراحتم") {
       
-        message.channel.send("هعی <:PB_cry:791931139555196928>")
+        message.channel.send("هعی")
 
     };
 
     if (message.content == "آروین") {
       
-        message.channel.send("اسممو نگوووو<:secshot:791749450191601695>")
+        message.channel.send("اسممو نگوووو")
     };
 
 
@@ -104,7 +104,7 @@ bot.on('message', (message) => {
 bot.on("message", msg => {
 
     if (msg.author.bot) return;
-    if (msg.channel.type == "dm") return msg.reply("Fuck You.One Of You!!!");
+    if (msg.channel.type == "dm") return;
 });
 
 bot.login(process.env.token);
