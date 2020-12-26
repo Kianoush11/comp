@@ -22,8 +22,7 @@ const Games = [
 const Statas = [
    "online", 
    "dnd", 
-   "idle", 
-   "invisible"
+   "idle"
 ];
 
 
@@ -64,7 +63,6 @@ bot.on('ready', () => {
 
 bot.on('message', (message) => {
 
-    if (message.channel.type == "channel") {
 
     if (message.content == "سلام") {
       
@@ -99,11 +97,7 @@ bot.on('message', (message) => {
     if (message.content == ":neutral_face:") {
       
         message.channel.send(":neutral_face:")
-    };
-
-};
-    
-    
+    }; 
 
 });
 
