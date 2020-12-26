@@ -28,13 +28,30 @@ const Statas = [
 
 
 
+const activities_list = [
+    "Gta : sa", 
+    "Fuck The Saviors",
+    "Im dead", 
+    "Quietly!"
+    ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 
-bot.once('ready', () => {
-    console.log('Ready!');
-    
-    bot.user.setActivity('GTA : SA', {type: "PLAYING"});
+    const activities_list2 = [
+      "PLAYING", 
+      "LISTENING", 
+      "WATCHING"
+     ]; 
+
+bot.on('ready', () => {
+    setInterval(() => {
+        const index = Math.floor(Math.random() * (activities_list.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+
+        const index2 = Math.floor(Math.random() * (activities_list2.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
+
+        bot.user.setActivity(activities_list[index], {type: activities_list2[index2]}); // sets bot's activities to one of the phrases in the arraylist.
+    }, 8000); // Runs this every 1 seconds.
 });
+
 
 bot.on('message', (message) => {
     
@@ -73,11 +90,7 @@ bot.on('message', (message) => {
         message.channel.send(":neutral_face:")
     };
 
-    if (message.content == ":|") {
-      
-        message.channel.send(":neutral_face:")
-    };
-   
+    
 
 });
 
