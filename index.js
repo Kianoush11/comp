@@ -73,6 +73,10 @@ bot.on('message', (message) => {
         message.channel.send(":neutral_face:")
     };
 
+    if (message.content == ":|") {
+      
+        message.channel.send(":neutral_face:")
+    };
    
 
 });
