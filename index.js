@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot     = new Discord.bot({fetchAllMembers: true});
+const bot     = new Discord.Client({fetchAllMembers: true});
 const fs      = require("fs");
 const moment  = require("moment");
 
