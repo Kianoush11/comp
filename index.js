@@ -32,7 +32,10 @@ const activities_list = [
     "Gta : sa", 
     "Fuck The Saviors",
     "Im dead", 
-    "Quietly!"
+    "Quietly!", 
+    "Without Any Reason ...", 
+    "So You see a ghost...", 
+    "In a Vitural World"
     ]; // creates an arraylist containing phrases you want your bot to switch through.
 
 
@@ -49,6 +52,12 @@ bot.on('ready', () => {
         const index2 = Math.floor(Math.random() * (activities_list2.length - 1) + 1); // generates a random number between 1 and the length of the activities array list (in this case 5).
 
         bot.user.setActivity(activities_list[index], {type: activities_list2[index2]}); // sets bot's activities to one of the phrases in the arraylist.
+    }, 8000); // Runs this every 1 seconds.
+
+    setInterval(() => {
+        const index3 = Math.floor(Math.random() * (Statas.length - 1) + 1);
+
+        bot.user.setStatus(Statas[index3]);
     }, 8000); // Runs this every 1 seconds.
 });
 
@@ -97,7 +106,7 @@ bot.on('message', (message) => {
 bot.on("message", msg => {
 
     if (msg.author.bot) return;
-    if (msg.channel.type == "dm") return;
+    if (msg.channel.type == "dm") return msg.reply("Fuck You.One Of You!!!");
 });
 
 bot.login(process.env.token);
