@@ -33,18 +33,7 @@ const Statas = [
 bot.once('ready', () => {
     console.log('Ready!');
     
-     setInterval(() => {
-
-       const index = Math.floor(Math.random() * (Games.length - 1) + 1);
-       bot.user.setActivity(Games[index]);
-    }, 700000);
-
-    setInterval(() => {
-
-       const index2 = Math.floor(Math.random() * (Statas.length - 1) + 1);
-       bot.user.setStatus(Statas[index2]);
-    }, 500000);
-    
+    bot.user.setActivity('GTA : SA', {type: "PLAYING"});
 });
 
 bot.on('message', (message) => {
@@ -91,7 +80,7 @@ bot.on('message', (message) => {
 bot.on("message", msg => {
 
     if (msg.author.bot) return;
-    if (msg.channel.type == "dm") return msg.channel.send("<:pogpoker:788071979584454697>");
+    if (msg.channel.type == "dm") return;
 });
 
 bot.login(process.env.token);
