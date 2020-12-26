@@ -23,7 +23,7 @@ const Statas = [
    "online", 
    "dnd", 
    "idle", 
-   "invincible"
+   "invisible"
 ];
 
 
@@ -63,7 +63,9 @@ bot.on('ready', () => {
 
 
 bot.on('message', (message) => {
-    
+
+    if (msg.channel.type == "channel") {
+
     if (message.content == "سلام") {
       
         message.channel.send("سلام <:pogpoker:788071979584454697>")
@@ -99,6 +101,8 @@ bot.on('message', (message) => {
         message.channel.send(":neutral_face:")
     };
 
+};
+    
     
 
 });
