@@ -64,7 +64,7 @@ bot.on('ready', () => {
 
 bot.on('message', (message) => {
 
-    if (msg.channel.type == "channel") {
+    if (message.channel.type == "channel") {
 
     if (message.content == "سلام") {
       
