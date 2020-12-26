@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const bot     = new Discord.Client({fetchAllMembers: true});
+const bot     = new Discord.bot({fetchAllMembers: true});
 const fs      = require("fs");
 const moment  = require("moment");
 
@@ -14,14 +14,19 @@ const Games = [
     "Lego",
     "دایر گوز", 
     "Counter Strike : Global Offensive", 
-    ":|"
+    ":|", 
+    "Made by Green", 
+    "R.i.p"
 ];
 
 const Statas = [
    "online", 
    "dnd", 
-   "idle"
+   "idle", 
+   "invincible"
 ];
+
+
 
 
 
@@ -32,13 +37,13 @@ bot.once('ready', () => {
 
        const index = Math.floor(Math.random() * (Games.length - 1) + 1);
        bot.user.setActivity(Games[index]);
-    }, 100000);
+    }, 700000);
 
     setInterval(() => {
 
        const index2 = Math.floor(Math.random() * (Statas.length - 1) + 1);
        bot.user.setStatus(Statas[index2]);
-    }, 200000);
+    }, 500000);
     
 });
 
@@ -78,6 +83,8 @@ bot.on('message', (message) => {
       
         message.channel.send(":neutral_face:")
     };
+
+   
 
 });
 
